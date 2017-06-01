@@ -6,7 +6,7 @@
 /*   By: bmontoya <bmontoya@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/28 16:32:14 by bmontoya          #+#    #+#             */
-/*   Updated: 2017/06/01 13:29:56 by bmontoya         ###   ########.fr       */
+/*   Updated: 2017/06/01 13:58:03 by bmontoya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,8 @@ inline static void	fdf_calc_map(t_env *env)
 
 	xmid = env->xlen / 2;
 	ymid = env->ylen / 2;
-	env->xscale = env->width / (env->xlen * 2);
-	env->yscale = env->height / (env->ylen * 2);
+	env->xscale = (env->width / (env->xlen * 2)) + 1;
+	env->yscale = (env->height / (env->ylen * 2)) + 1;
 	env->zscale = env->maxz / (env->xscale + env->yscale);
 	if (!env->zscale && env->maxz)
 		env->zscale = (env->xscale + env->yscale) / env->maxz;
