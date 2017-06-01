@@ -1,0 +1,7 @@
+*.o
+*.a
+.tag*
+.clang*
+.nfs*
+.imdone
+minishell
